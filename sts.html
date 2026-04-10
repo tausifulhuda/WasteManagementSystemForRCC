@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style2.css">
+        <title>Secondary Transfer Stations (STSs)</title>
+    </head>
+    <script src="index.js" defer></script>
+    <body>
+        <div class="header">
+            <a href="http://erajshahi.portal.gov.bd/" target="_blank">
+                <img class="logo" src="images/rcc_logo.png">
+            </a>
+            <h3>WASTE MANAGEMENT SYSTEM FOR RCC</h3>
+            <a class="about_button" href="about.html">ABOUT</a>
+            <a class="map" href="map.html">MAP</a>
+            <a class="home" href="index.html">HOME</a>
+        </div>
+        <div>
+            <h1>SECONDARY TRANSFER STATIONS</h1>
+        </div>
+        <div class="stss">
+            <a class="sts" onclick="openPopup1()">
+                <img src="images/sts1.jpg" class="center" width="95%">
+                <div class="h5">BULONPUR SECONDARY TRANSFER STATION</div>
+                <div class="h6">Bulonpur, Rajshahi</div>
+            </a>
+            <div id="overlay1" class="overlay" onclick="outsideClick(event)">
+                <div class="popup">
+                    <img src="images/sts1.jpg" class="center" width="95%">
+                    <div class="h2">BULONPUR SECONDARY TRANSFER STATION</div>
+                    <div class="h4">Bulonpur, Rajshahi</div><br>
+                    
+                    <div class="container">
+                        <div class="row">
+                            <div class="info">Clearance Time:</div>     <div class="info2" id="fixed_time1">12:00:00 pm</div>
+                        </div>
+                        <div class="row">
+                            <div class="info">Current Time:</div>       <div class="info2" id="current_time1"></div>
+                        </div>
+                        <div class="row">
+                            <div class="info">Next Clearance In:</div>  <div class="info2" id="next_clear1"></div>
+                        </div>
+                        <div class="row">
+                            <div class="info">Status:</div>             <div class="info2" id="status1"></div>
+                        </div>
+                    </div>
+                    <a class="contact">CONTACT</a>
+                </div>
+            </div>
+            <a class="sts" onclick="openPopup2()">
+                <img src="images/sts2.jpg" class="center" width="95%">
+                <div class="h5">RAILWAY SECONDARY TRANSFER STATION</div>
+                <div class="h6">Station Road, Rajshahi</div>
+            </a>
+            <div id="overlay2" class="overlay" onclick="outsideClick(event)">
+                <div class="popup">
+                    <img src="images/sts2.jpg" class="center" width="95%">
+                    <div class="h2">RAILWAY SECONDARY TRANSFER STATION</div>
+                    <div class="h4">Station Road, Rajshahi</div><br>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="info">Clearance Time:</div>     <div class="info2" id="fixed_time2">01:00:00 pm</div>
+                        </div>
+                        <div class="row">
+                            <div class="info">Current Time:</div>       <div class="info2" id="current_time2"></div>
+                        </div>
+                        <div class="row">
+                            <div class="info">Next Clearance In:</div>  <div class="info2" id="next_clear2"></div>
+                        </div>
+                        <div class="row">
+                            <div class="info">Status:</div>             <div class="info2" id="status2"></div>
+                        </div>
+                    </div>
+                    <a class="contact">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
