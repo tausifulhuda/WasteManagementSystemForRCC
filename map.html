@@ -4,6 +4,32 @@
         <link rel="stylesheet" href="style2.css">
         <title>Map of Secondary Transfer Stations</title>
     </head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.querySelector(".map_container"); 
+            const img = document.querySelector(".map_img");
+
+            if (!img || !container) {
+                console.log("Element not found!");
+                return;
+            }
+            let scale = 1;
+            img.addEventListener("wheel", function(e) {
+                e.preventDefault();
+
+                if (e.deltaY < 0) scale += 0.1;
+                else scale -= 0.1;
+
+                scale = Math.min(Math.max(0.5, scale), 4);
+                img.style.transform = `scale(${scale})`;
+            });
+            container.addEventListener("mouseleave", function () {
+                scale = 1;
+                img.style.transform = `scale(1)`; 
+            });
+        });
+    </script>
+    
     <div class="header">
         <a href="http://erajshahi.portal.gov.bd/" target="_blank">
             <img class="logo" src="images/rcc_logo.png">
@@ -16,7 +42,7 @@
     <div>
         <h1>MAP FOR SECONDARY TRANSFER STATIONS</h1>
     </div>
-    <div>
+    <div class="map_container">
         <img src="images/map.png" class="map_img">
     </div>
 </html>
