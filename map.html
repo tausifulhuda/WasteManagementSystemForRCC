@@ -27,6 +27,25 @@
                 scale = 1;
                 img.style.transform = `scale(1)`; 
             });
+
+            container.addEventListener("click", function () {
+                scale += 0.2;
+                scale = Math.min(scale, 4);
+                img.style.transform = `scale(${scale})`;
+            });
+
+            container.addEventListener("contextmenu", function (e) {
+                e.preventDefault(); // disable menu
+
+                scale -= 0.2;
+                scale = Math.max(scale, 0.5);
+                img.style.transform = `scale(${scale})`;
+            });
+
+            container.addEventListener("mouseleave", function () {
+                scale = 1;
+                img.style.transform = `scale(1)`;
+            });
         });
     </script>
     
