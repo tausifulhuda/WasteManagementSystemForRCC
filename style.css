@@ -22,6 +22,12 @@ body{
     padding-bottom: 50px;
 }
 
+.logo_container{
+    width: 150px;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+}
 .logo{
     width: 150px;
     margin-top: 50px;
@@ -96,9 +102,5 @@ a{
     opacity:0.75;
 }
 
-.button_div{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
+
 
