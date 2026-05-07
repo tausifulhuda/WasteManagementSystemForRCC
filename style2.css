@@ -248,7 +248,7 @@ a{
     color: white;
     background: rgba(0, 25, 3, 0.5);
     backdrop-filter: blur(140px);
-    font-family: 'Cambria';
+    font-family: 'Calibri';
     font-size: 25px;
     text-shadow: 5px 5px 10px black;
     padding-top: 20px;
@@ -336,9 +336,9 @@ a{
 }
 
 .popup {
-    background: rgb(230, 255, 230);
-    width: 500px;
-    height: 600px;
+    background: rgba(230, 255, 230);
+    width: 560px;
+    height: 630px;
     padding: 20px;
     border-radius: 12px;
     position: relative;

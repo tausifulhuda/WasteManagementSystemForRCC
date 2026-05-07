@@ -4,12 +4,36 @@ function openPopup1() {
 function openPopup2() {
     document.getElementById("overlay2").style.display = "flex";
 }
+function openPopup3() {
+    document.getElementById("overlay3").style.display = "flex";
+}
+function openPopup4() {
+    document.getElementById("overlay4").style.display = "flex";
+}
+function openPopup5() {
+    document.getElementById("overlay5").style.display = "flex";
+}
+function openPopup6() {
+    document.getElementById("overlay6").style.display = "flex";
+}
 
 function closePopup1() {
     document.getElementById("overlay1").style.display = "none";           
 }
 function closePopup2() {
     document.getElementById("overlay2").style.display = "none";
+}
+function closePopup3() {
+    document.getElementById("overlay3").style.display = "none";
+}
+function closePopup4() {
+    document.getElementById("overlay4").style.display = "none";
+}
+function closePopup5() {
+    document.getElementById("overlay5").style.display = "none";
+}
+function closePopup6() {
+    document.getElementById("overlay6").style.display = "none";
 }
 
 function outsideClick(event) {
@@ -18,6 +42,18 @@ function outsideClick(event) {
     }
     else if (event.target.id === "overlay2") {
         closePopup2();
+    }
+    else if (event.target.id === "overlay3") {
+        closePopup3();
+    }
+    else if (event.target.id === "overlay4") {
+        closePopup4();
+    }
+    else if (event.target.id === "overlay5") {
+        closePopup5();
+    }
+    else if (event.target.id === "overlay6") {
+        closePopup6();
     }
 }
 
@@ -40,18 +76,38 @@ function currentTime(){
     if(hours==0){
         current_time1.textContent="12"+":"+minutes+":"+seconds+" am";
         current_time2.textContent="12"+":"+minutes+":"+seconds+" am";
+        current_time3.textContent="12"+":"+minutes+":"+seconds+" am";
+        current_time4.textContent="12"+":"+minutes+":"+seconds+" am";
+        current_time5.textContent="12"+":"+minutes+":"+seconds+" am";
+        current_time6.textContent="12"+":"+minutes+":"+seconds+" am";
     }
     else if(hours<12){
         current_time1.textContent=hours+":"+minutes+":"+seconds+" am";
         current_time2.textContent=hours+":"+minutes+":"+seconds+" am";
+        current_time3.textContent=hours+":"+minutes+":"+seconds+" am";
+        current_time4.textContent=hours+":"+minutes+":"+seconds+" am";
+        current_time5.textContent=hours+":"+minutes+":"+seconds+" am";
+        current_time6.textContent=hours+":"+minutes+":"+seconds+" am";
     }
-    else if(hours>=12){
+    else if(hours===12){
+        current_time1.textContent=hours+":"+minutes+":"+seconds+" pm";
+        current_time2.textContent=hours+":"+minutes+":"+seconds+" pm";
+        current_time3.textContent=hours+":"+minutes+":"+seconds+" pm";
+        current_time4.textContent=hours+":"+minutes+":"+seconds+" pm";
+        current_time5.textContent=hours+":"+minutes+":"+seconds+" pm";
+        current_time6.textContent=hours+":"+minutes+":"+seconds+" pm";
+    }
+    else if(hours>12){
         hours=hours-12;
         if(hours<10){
             hours="0"+hours;
         }
         current_time1.textContent=hours+":"+minutes+":"+seconds+" pm";
         current_time2.textContent=hours+":"+minutes+":"+seconds+" pm";
+        current_time3.textContent=hours+":"+minutes+":"+seconds+" pm";
+        current_time4.textContent=hours+":"+minutes+":"+seconds+" pm";
+        current_time5.textContent=hours+":"+minutes+":"+seconds+" pm";
+        current_time6.textContent=hours+":"+minutes+":"+seconds+" pm";
     }
 }
 
@@ -97,6 +153,10 @@ function remainingTime(start_time, end_time){
 function remTimeUpdate(){
     next_clear1.textContent=remainingTime(current_time1.textContent, fixed_time1.textContent);
     next_clear2.textContent=remainingTime(current_time2.textContent, fixed_time2.textContent);
+    next_clear3.textContent=remainingTime(current_time3.textContent, fixed_time3.textContent);
+    next_clear4.textContent=remainingTime(current_time4.textContent, fixed_time4.textContent);
+    next_clear5.textContent=remainingTime(current_time5.textContent, fixed_time5.textContent);
+    next_clear6.textContent=remainingTime(current_time6.textContent, fixed_time6.textContent);
 }
 
 setInterval(remTimeUpdate, 1000); 
@@ -123,6 +183,22 @@ function update_status(){
     hour=parseRemTime(next_clear2.textContent);
     stat=fill_status(hour);
     status2.textContent=stat+"% Filled";
+
+    hour=parseRemTime(next_clear3.textContent);
+    stat=fill_status(hour);
+    status3.textContent=stat+"% Filled";
+
+    hour=parseRemTime(next_clear4.textContent);
+    stat=fill_status(hour);
+    status4.textContent=stat+"% Filled";
+
+    hour=parseRemTime(next_clear5.textContent);
+    stat=fill_status(hour);
+    status5.textContent=stat+"% Filled";
+
+    hour=parseRemTime(next_clear6.textContent);
+    stat=fill_status(hour);
+    status6.textContent=stat+"% Filled";
 }
 
 setInterval(update_status, 1000); 
