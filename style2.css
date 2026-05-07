@@ -217,8 +217,8 @@ a{
 }
 
 .sts{
-    width:12%;
-    padding-bottom: 20px;
+    width:300px;
+    height: 275px;
     margin-left:20px;
     margin-right:20px;
     border: 1px solid rgb(22, 62, 7);
@@ -337,8 +337,8 @@ a{
 
 .popup {
     background: rgba(230, 255, 230);
-    width: 22%;
-    height: 69%;
+    width: 560px;
+    height: 630px;
     padding: 20px;
     border-radius: 12px;
     position: relative;
